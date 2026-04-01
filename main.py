@@ -12,7 +12,7 @@ def resize_image(image, new_width=100):
 
 def convert_to_ascii():
     file_path = file_label.cget("text")
-    if not file_path or file_path == "Файл не выбран":
+    if not file_path or file_path == "photo found":
         messagebox.showwarning("Error", "Not found photo")
         return
 
@@ -47,13 +47,13 @@ root.configure(bg="#2c3e50")
 frame = tk.Frame(root, bg="#34495e", bd=5)
 frame.pack(side=tk.TOP, fill=tk.X)
 
-btn_select = tk.Button(frame, text="Выбрать фото", command=select_file, bg="#e67e22", fg="white", font=("Arial", 10, "bold"))
+btn_select = tk.Button(frame, text="select photo", command=select_file, bg="#e67e22", fg="white", font=("Arial", 10, "bold"))
 btn_select.pack(side=tk.LEFT, padx=10, pady=10)
 
-file_label = tk.Label(frame, text="Файл не выбран", bg="#34495e", fg="#ecf0f1", width=40, anchor="w")
+file_label = tk.Label(frame, text="the phote not select", bg="#34495e", fg="#ecf0f1", width=40, anchor="w")
 file_label.pack(side=tk.LEFT, padx=10)
 
-tk.Label(frame, text="Ширина:", bg="#34495e", fg="white").pack(side=tk.LEFT, padx=5)
+tk.Label(frame, text="width:", bg="#34495e", fg="white").pack(side=tk.LEFT, padx=5)
 width_entry = tk.Entry(frame, width=5)
 width_entry.insert(0, "100")
 width_entry.pack(side=tk.LEFT, padx=5)
